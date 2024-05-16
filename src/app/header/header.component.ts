@@ -6,7 +6,8 @@ import { Component } from "@angular/core";
     // template: `
     //     <h3>This is a header</h3>
     // `
-    templateUrl: "./header.component.html"
+    templateUrl: "./header.component.html",
+    styleUrls: ["./header.component.css"],
 })
 
 export class HeaderComponent {
