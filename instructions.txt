@@ -1,0 +1,32 @@
+Install bootstrap in project
+============================
+
+    1. in terminal run this command: 
+        
+        npm install --save bootstrap
+
+    2. Open angular.json file, in the style attribute, add below line:
+
+        "node_modules/bootstrap/dist/css/bootstrap.min.css",
+
+        or add @import in styles.css: @import "~../node_modules/bootstrap/dist/css/bootstrap.min.css"
+
+Remove bootstrap from project
+=============================
+
+    1. Run below command:
+
+        npm uninstall bootstrap
+
+Create component using CLI
+===========================
+
+    1. Run below command:
+
+        ng generate component <component-name>
+
+    2. To create a child component, navigate to the selected component folder using cd
+
+    
+
+
