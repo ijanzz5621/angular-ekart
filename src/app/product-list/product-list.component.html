@@ -14,13 +14,37 @@
 
 <p>{{ product.inStock > 0 ? 'Only ' + product.inStock + ' left' : 'No stock available' }}</p>
 
-<button [disabled]="!(product.inStock > 0)" class="btn btn-primary">Buy Now</button>
+<button 
+    [disabled]="!(product.inStock > 0)" 
+    class="btn btn-primary"
+    (click)="addItemToCart()">
+    Add To Cart
+</button>
 
 <br><br>
 
+<div>
+    <button [disabled]="!(addToCart > 0)" (click)="decrementCartValue()">-</button>
+    <span>{{addToCart}}</span>
+    <button [disabled]="addToCart == product.inStock" (click)="incrementCartValue()">+</button>
+</div>
+
+<br>
+
 <!-- 
     value -> Property Binding 
-
     aria-hidden -> Attribute Binding (start with attr.)
 -->
-<input type="text" [value]="name" [attr.aria-hidden]="false" class="form-control" style="width: 200px;">
+<input 
+    type="text" 
+    [value]="name" 
+    [attr.aria-hidden]="false" 
+    class="form-control" 
+    style="width: 200px;"
+    (input)="onNameChanged($event)" />
+
+<br>
+
+<p>Total item added to cart: {{addToCart}}</p>
+
+<p>Hi {{name}}, are you sure you want to proceed?</p>
