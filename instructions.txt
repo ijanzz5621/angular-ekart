@@ -27,6 +27,16 @@ Create component using CLI
 
     2. To create a child component, navigate to the selected component folder using cd
 
-    
+Few ways to use selector
+======================
 
+    1. selector: "selector-name"    // html tag             <selector-name></selector-name>
+    2. selector: "[selector-name]"  // html attributes      <div selector-name></div>
+    3. selector: ".selector-name"   // html class           <div class="selector-name" />
+    4. selector: "#selector-name"   // html id              <div id="selector-name" />
+
+Property Binding
+=================
+
+    Either use [] to wrap the property or use bind-<propertyname>
 

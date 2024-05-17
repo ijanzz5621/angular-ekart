@@ -1,0 +1,26 @@
+<!-- 
+<p>Name: {{name}}</p>
+<p>Price: ${{price}}</p>
+<p>Color: {{color}}</p>
+<p>Discounted Price: ${{discountedPrice}}</p> -->
+
+<img [src]="product.pImage" alt="">
+
+<p>Name: {{product.name}}</p>
+<p>Price: {{ '$'+product.price.toFixed(2) }}</p>
+<p>Color: {{product.color}}</p>
+<!-- <p>Discounted Price: ${{product.price - (product.price * 0.10)}}</p> -->
+<p>Discounted Price: ${{ getDiscountedPrice().toFixed(2) }}</p>
+
+<p>{{ product.inStock > 0 ? 'Only ' + product.inStock + ' left' : 'No stock available' }}</p>
+
+<button [disabled]="!(product.inStock > 0)" class="btn btn-primary">Buy Now</button>
+
+<br><br>
+
+<!-- 
+    value -> Property Binding 
+
+    aria-hidden -> Attribute Binding (start with attr.)
+-->
+<input type="text" [value]="name" [attr.aria-hidden]="false" class="form-control" style="width: 200px;">
