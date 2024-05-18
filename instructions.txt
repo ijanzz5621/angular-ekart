@@ -40,3 +40,12 @@ Property Binding
 
     Either use [] to wrap the property or use bind-<propertyname>
 
+Directives (manipulate the DOM)
+===============================
+
+    1. Component Directive
+
+    2. Attribute Directive (eg: ngClass)
+
+    3. Structural Directive (eg: ngIf, ngFor, ngSwitch) - must add * to them
+
