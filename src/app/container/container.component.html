@@ -6,6 +6,13 @@
 
 <app-search></app-search>
 
+<product-list></product-list>
+
+<!-- <div *ngFor="let item of [1,2,3,6,7,8,9,0]"> -->
+<div *ngFor="let item of listOfString">
+    <p>{{item}}</p>
+</div>
+
 <img [src]="product.pImage" alt="">
 
 <p>Name: {{product.name}}</p>

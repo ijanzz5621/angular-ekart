@@ -49,3 +49,8 @@ Directives (manipulate the DOM)
 
     3. Structural Directive (eg: ngIf, ngFor, ngSwitch) - must add * to them
 
+    IMPORTANT: for Angular 17 and above, need to import the CommonModule
+    and register for eg: NgFor in the component Imports:[]
+
+
+
