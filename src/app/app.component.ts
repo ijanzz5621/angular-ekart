@@ -1,3 +1,4 @@
+import { FormsModule } from '@angular/forms';
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
@@ -12,7 +13,8 @@ import { ProductListComponent } from './product-list/product-list.component';
     RouterOutlet,
     HeaderComponent,
     TopHeaderComponent,
-    ProductListComponent
+    ProductListComponent,
+    FormsModule
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
