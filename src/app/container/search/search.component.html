@@ -1,11 +1,11 @@
 <div class="ekart--search--product">
     <!-- <input type="text" class="ekart-search-product-input" [value]="searchText" (input)="updateSearchText($event)"> -->
     <input type="text" class="ekart-search-product-input" [(ngModel)]="searchText">
-    <button class="button button-search">Search</button>
+    <button [ngClass]="{'button': true, 'button-search': searchText.length > 0, 'button-search-disabled': !searchText}" [disabled]="!(searchText.length > 0)">Search</button>
 </div>
 
 <div class="ekart-search-result-for">
-    <p><strong>Search result for:</strong> {{searchText}}</p>
+    <p *ngIf="searchText.length > 0"><strong>Search result for:</strong> {{searchText}}</p>
 </div>
 <!-- <div class="ekart-product-container-header"><h2>SHOES</h2></div>
 <div class="ekart--products--container"></div> -->

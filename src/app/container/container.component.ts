@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CommonModule, NgFor } from '@angular/common';
+import { NgFor } from '@angular/common';
 import { SearchComponent } from './search/search.component';
 import { ProductListComponent } from './product-list/product-list.component';
 
