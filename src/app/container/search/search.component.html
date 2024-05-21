@@ -1,7 +1,10 @@
 <div class="ekart--search--product">
     <!-- <input type="text" class="ekart-search-product-input" [value]="searchText" (input)="updateSearchText($event)"> -->
-    <input type="text" class="ekart-search-product-input" [(ngModel)]="searchText">
-    <button [ngClass]="{'button': true, 'button-search': searchText.length > 0, 'button-search-disabled': !searchText}" [disabled]="!(searchText.length > 0)">Search</button>
+    <!-- <input type="text" class="ekart-search-product-input" [(ngModel)]="searchText" (input)="onSearchTextChanged()"> -->
+    <input type="text" #searchInput class="ekart-search-product-input">
+    <!-- <button [ngClass]="{'button': true, 'button-search': searchText.length > 0, 'button-search-disabled': !searchText}" [disabled]="!(searchText.length > 0)" (click)="onSearchTextChanged()">Search</button> -->
+    <!-- <button [ngClass]="{'button': true, 'button-search': true}" (click)="onSearchTextChanged()">Search</button> -->
+    <button [ngClass]="{'button': true, 'button-search': true}" (click)="setSearchTextChanged(searchInput)">Search</button>
 </div>
 
 <div class="ekart-search-result-for">

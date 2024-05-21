@@ -1,5 +1,8 @@
-import { Component } from '@angular/core';
-import { NgFor, NgIf, NgStyle } from '@angular/common';
+import { Component, DoCheck, Input } from '@angular/core';
+import { ProductComponent } from './product/product.component';
+import { NgFor, NgIf } from '@angular/common';
+import { ProductItem } from '../../models/ProductItem';
+import { FilterComponent } from './filter/filter.component';
 
 @Component({
   selector: 'product-list',
@@ -7,13 +10,14 @@ import { NgFor, NgIf, NgStyle } from '@angular/common';
   imports: [
     NgFor,
     NgIf,
-    NgStyle
+    ProductComponent,
+    FilterComponent
   ],
   templateUrl: './product-list.component.html',
   styleUrl: './product-list.component.css'
 })
 
-export class ProductListComponent {
+export class ProductListComponent implements DoCheck {
   
   // @Input() src:string = '';
   // @Input() default:string = '/assets/images/iphone.png';
@@ -22,7 +26,10 @@ export class ProductListComponent {
   //   this.src = this.default;
   // }
 
-  products = [
+  @Input()
+  searchText: string = "";
+
+  products: ProductItem[] = [
     {
       id: 1,
       name: "Nike React Infinity Run Flyknit",
@@ -77,7 +84,7 @@ export class ProductListComponent {
       gender: "WOMEN",
       category: "RUNNING",
       size: [6, 7, 8, 9, 10],
-      color: ["White", , "Brown", "Red"],
+      color: ["White", "Brown", "Red"],
       price: 180,
       discountPrice:140,
       is_in_inventory: false,
@@ -548,5 +555,34 @@ export class ProductListComponent {
       slug: "michael-feburary-sk8-hi"
     }
   ];
+
+  totalProductCount: number = this.calculateTotalProductCount();
+  totalProductInStock: number = this.calculateTotalProductInStock();
+  totalProductOutOfStock: number = this.calculateTotalProductOutOfStock();
+
+  selectedFilterRadioButton: string = "all";
+
+  onFilterChanged(value: string) {
+    console.log('onFilterChanged value = %s', value);
+    this.selectedFilterRadioButton = value;
+  }
+
+  ngDoCheck(): void {
+      this.totalProductCount = this.calculateTotalProductCount();
+      this.totalProductInStock = this.calculateTotalProductInStock();
+      this.totalProductOutOfStock = this.calculateTotalProductOutOfStock();
+  }
+
+  calculateTotalProductCount() {
+    return this.totalProductCount = this.products.filter(p => p.name.toLowerCase().includes(this.searchText)).length;
+  }
+
+  calculateTotalProductInStock() {
+    return this.totalProductInStock = this.products.filter(p => p.name.toLowerCase().includes(this.searchText) && p.is_in_inventory === true).length;
+  }
+
+  calculateTotalProductOutOfStock() {
+    return this.totalProductOutOfStock = this.products.filter(p => p.name.toLowerCase().includes(this.searchText) && p.is_in_inventory === false).length;
+  }
 
 }

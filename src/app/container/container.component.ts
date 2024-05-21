@@ -20,6 +20,8 @@ export class ContainerComponent {
   // color: string = "Red";
   // discountedPrice: number = 799;
 
+  searchText: string = "";
+
   listOfString: string[] = ['Sharizan', 'Safinaz', 'Azian', 'Sara']
 
   name: string = "Sharizan Redzuan";
@@ -55,6 +57,11 @@ export class ContainerComponent {
 
   incrementCartValue() {
     this.addToCart++;
+  }
+
+  onSearchTextChanged(value: string) {
+    // console.log(value)
+    this.searchText = value;
   }
 
 }

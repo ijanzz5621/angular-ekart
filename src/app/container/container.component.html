@@ -4,9 +4,8 @@
 <p>Color: {{color}}</p>
 <p>Discounted Price: ${{discountedPrice}}</p> -->
 
-<app-search></app-search>
-
-<product-list></product-list>
+<app-search (searchTextChanged)="onSearchTextChanged($event)"></app-search>
+<product-list [searchText]="searchText"></product-list>
 
 <!-- <div *ngFor="let item of [1,2,3,6,7,8,9,0]"> -->
 <div *ngFor="let item of listOfString">
