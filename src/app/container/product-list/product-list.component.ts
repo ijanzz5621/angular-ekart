@@ -26,6 +26,12 @@ export class ProductListComponent implements DoCheck {
   //   this.src = this.default;
   // }
 
+  constructor() {
+    this.selectedProduct = undefined
+  }
+
+  selectedProduct: ProductItem | undefined;
+
   @Input()
   searchText: string = "";
 

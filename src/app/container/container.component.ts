@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
-import { NgFor } from '@angular/common';
+import { NgFor, NgIf } from '@angular/common';
 import { SearchComponent } from './search/search.component';
 import { ProductListComponent } from './product-list/product-list.component';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
 
 @Component({
   selector: 'app-container',
@@ -9,7 +10,9 @@ import { ProductListComponent } from './product-list/product-list.component';
   imports: [
     SearchComponent,
     NgFor,
-    ProductListComponent
+    NgIf,
+    ProductListComponent,
+    ProductDetailComponent
   ],
   templateUrl: './container.component.html',
   styleUrl: './container.component.css'
