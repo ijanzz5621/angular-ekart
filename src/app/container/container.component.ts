@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { NgFor, NgIf } from '@angular/common';
 import { SearchComponent } from './search/search.component';
 import { ProductListComponent } from './product-list/product-list.component';
@@ -30,6 +30,8 @@ export class ContainerComponent {
   name: string = "Sharizan Redzuan";
 
   addToCart: number = 0;
+
+  @ViewChild(ProductListComponent) productListComponent: ProductListComponent | undefined;
 
   product = {
     name: "iPhone 14",

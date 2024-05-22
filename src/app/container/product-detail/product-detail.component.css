@@ -78,6 +78,7 @@ span{
 .ekart-product-detail-available-color{
     border-radius: 50%;
     padding: 8px 18px;
+    border: 1px solid #e0e0e0;
 }
 .ekart-product-detail-desc{
     margin-top: 30px;
