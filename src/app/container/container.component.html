@@ -8,10 +8,50 @@
 <product-list [searchText]="searchText" #productListComponent></product-list>
 <product-detail *ngIf="productListComponent.selectedProduct" [productListComponent] = "productListComponent"></product-detail>
 
-<!-- <div *ngFor="let item of [1,2,3,6,7,8,9,0]"> -->
-<div *ngFor="let item of listOfString">
-    <p>{{item}}</p>
+<div class="ekart-featured-products">
+    <div class="ekart-featured-product-heading">
+        <h1>Latest Arrival in Popular Brands </h1>
+    </div>
+
+    <featured-brands>
+        <h3 class="title">New Arrival in Nike</h3>
+        <button class="call-to-action">Show new arrival in Nike</button>
+    </featured-brands>
+    <featured-brands>
+        <h3 class="title">New Arrival in Adidas</h3>
+        <button class="call-to-action">Show new arrival in Adidas</button>
+    </featured-brands>
+    <featured-brands>
+        <h3 class="title">New Arrival in Reebok</h3>
+        <button class="call-to-action">Show new arrival in Reebok</button>
+    </featured-brands>
+
+    <!-- <div class="ekart-featured-product-item">
+        <h3 class="title">New Arrival in Adidas</h3>
+        <p class="description">
+            Some description about the new featured product. 
+            Some description about the new featured product. 
+            Some description about the new featured product. 
+        </p>
+        <button class="call-to-action">Learn More</button>
+    </div>
+
+    <div class="ekart-featured-product-item">
+        <h3 class="title">New Arrival in Reebok</h3>
+        <p class="description">
+            Some description about the new featured product. 
+            Some description about the new featured product. 
+            Some description about the new featured product. 
+        </p>
+        <button class="call-to-action">Learn More</button>
+    </div> -->
+
 </div>
+
+<!-- <div *ngFor="let item of [1,2,3,6,7,8,9,0]"> -->
+<!-- <div *ngFor="let item of listOfString">
+    <p>{{item}}</p>
+</div> -->
 
 <img [src]="product.pImage" alt="">
 
