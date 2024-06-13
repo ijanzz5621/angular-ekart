@@ -2,6 +2,7 @@ import { Component, Input } from '@angular/core';
 import { NgIf, NgFor, NgStyle } from '@angular/common';
 import { ProductItem } from '../../models/ProductItem';
 import { ProductListComponent } from '../product-list/product-list.component';
+import { SetBackground } from '../../CustomDirectives/SetBackground.directive';
 
 @Component({
   selector: 'product-detail',
@@ -9,7 +10,8 @@ import { ProductListComponent } from '../product-list/product-list.component';
   imports: [
     NgIf, 
     NgFor,
-    NgStyle
+    NgStyle,
+    SetBackground
   ],
   templateUrl: './product-detail.component.html',
   styleUrl: './product-detail.component.css'
