@@ -25,6 +25,8 @@ export class ProductDetailComponent {
 
   product: ProductItem | undefined; 
 
+  title: String = 'HOST TITLE';
+
   ngOnInit(){
     this.product = this.productListComponent!.selectedProduct;
   }
