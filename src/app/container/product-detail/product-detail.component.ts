@@ -3,6 +3,7 @@ import { NgIf, NgFor, NgStyle } from '@angular/common';
 import { ProductItem } from '../../models/ProductItem';
 import { ProductListComponent } from '../product-list/product-list.component';
 import { SetBackground } from '../../CustomDirectives/SetBackground.directive';
+import { AppHoverDirective } from '../../CustomDirectives/app-hover.directive';
 
 @Component({
   selector: 'product-detail',
@@ -11,7 +12,8 @@ import { SetBackground } from '../../CustomDirectives/SetBackground.directive';
     NgIf, 
     NgFor,
     NgStyle,
-    SetBackground
+    SetBackground,
+    AppHoverDirective
   ],
   templateUrl: './product-detail.component.html',
   styleUrl: './product-detail.component.css'
@@ -22,6 +24,8 @@ export class ProductDetailComponent {
   productListComponent: ProductListComponent | undefined = undefined;
 
   product: ProductItem | undefined; 
+
+  title: String = 'HOST TITLE';
 
   ngOnInit(){
     this.product = this.productListComponent!.selectedProduct;
