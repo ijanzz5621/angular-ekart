@@ -4,6 +4,7 @@ import { ProductItem } from '../../models/ProductItem';
 import { ProductListComponent } from '../product-list/product-list.component';
 import { SetBackground } from '../../CustomDirectives/SetBackground.directive';
 import { AppHoverDirective } from '../../CustomDirectives/app-hover.directive';
+import { DisableProductDirective } from '../../CustomDirectives/disable-product.directive';
 
 @Component({
   selector: 'product-detail',
@@ -13,7 +14,8 @@ import { AppHoverDirective } from '../../CustomDirectives/app-hover.directive';
     NgFor,
     NgStyle,
     SetBackground,
-    AppHoverDirective
+    AppHoverDirective,
+    DisableProductDirective
   ],
   templateUrl: './product-detail.component.html',
   styleUrl: './product-detail.component.css'
