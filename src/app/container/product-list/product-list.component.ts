@@ -3,6 +3,7 @@ import { ProductComponent } from './product/product.component';
 import { NgFor, NgIf } from '@angular/common';
 import { ProductItem } from '../../models/ProductItem';
 import { FilterComponent } from './filter/filter.component';
+import { HighlightDirective } from '../../CustomDirectives/highlight.directive';
 
 @Component({
   selector: 'product-list',
@@ -11,7 +12,8 @@ import { FilterComponent } from './filter/filter.component';
     NgFor,
     NgIf,
     ProductComponent,
-    FilterComponent
+    FilterComponent,
+    HighlightDirective
   ],
   templateUrl: './product-list.component.html',
   styleUrl: './product-list.component.css'

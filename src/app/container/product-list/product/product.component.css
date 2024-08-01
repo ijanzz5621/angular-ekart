@@ -58,11 +58,18 @@
     color: #999;
     margin-top: 7px;
 }
-.ekart--product--item:hover{
+/* .ekart--product--item:hover{
     -webkit-box-shadow: 0 0 1px #000 inset;
     -moz-box-shadow: 0 0 1px 3px #000 inset;
     border: #efefef 0 0 1px 3px #000 inset;
     box-shadow: 10px 10px 18px #cccccc;
     transform: scale(1.05);
-}
+} */
 
+.highlight-product{
+    -webkit-box-shadow: 0 0 1px #eb0a0a inset;
+    -moz-box-shadow: 0 0 1px 3px #f80707 inset;
+    border: #efefef 0 0 1px 3px #f50909 inset;
+    box-shadow: 10px 10px 18px #e90404;
+    transform: scale(1.05);
+}

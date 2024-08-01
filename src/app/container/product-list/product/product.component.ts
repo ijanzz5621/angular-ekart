@@ -2,6 +2,8 @@ import { Component, Input } from '@angular/core';
 import { NgFor, NgIf, NgStyle } from '@angular/common';
 
 import { ProductItem } from '../../../models/ProductItem';
+
+import { HighlightDirective } from '../../../CustomDirectives/highlight.directive';
 import { DisableProductDirective } from '../../../CustomDirectives/disable-product.directive';
 
 @Component({
@@ -10,8 +12,7 @@ import { DisableProductDirective } from '../../../CustomDirectives/disable-produ
   imports: [    
     NgFor,
     NgIf,
-    NgStyle,
-    DisableProductDirective
+    NgStyle
   ],
   templateUrl: './product.component.html',
   styleUrl: './product.component.css'
